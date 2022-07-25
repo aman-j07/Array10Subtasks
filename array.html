@@ -12,7 +12,8 @@
     <table id="list">
     <tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th></tr>
     </table></div>
-    <div id="searchdiv"><select name="" id="heads">
+    <div id="searchdiv">
+        <h2>Task 1</h2><select id="heads">
         <option value="">Company</option>
         <option value="">Model</option>
         <option value="">Memory</option>
@@ -21,8 +22,23 @@
 <input type="text" name="" id="search">
 <button id="submit" onclick="search()">Submit</button></div>
 <div id="tablesearch">
-    
+
 </div>
+<div id="searchdiv">
+    <h2>Task 2</h2>
+    <select  id="sort" onchange="sorting()">
+    <option >Sort--</option>
+    <option>Ascending</option>
+    <option>Descending</option></select>
+    <select id="heads2" onchange="sorting()">
+    <option >Sort by--</option>
+    <option value="">Company</option>
+    <option value="">Model</option>
+    <option value="">Memory</option>
+    <option value="">Price</option>
+</select>
+</div>
+<div id="tablesearch"></div>
     <script src="jsarray.js"></script>
 </body>
 </html>
