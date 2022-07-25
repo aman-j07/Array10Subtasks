@@ -15,6 +15,7 @@ tablesearch=document.getElementById("tablesearch");
 function populate(){
 list=document.getElementById("list");
 list.innerHTML="";
+list.innerHTML="<tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th></tr>";
 text=""
 for(i=0;i<details.length;i++){
     
@@ -111,4 +112,11 @@ function sorting(){
     }
 }
 populate();
+}
+
+function AddProduct(){
+    add={company:document.getElementById("addCompany").value,model:document.getElementById("addModel").value,memory:document.getElementById("addMemory").value,price:document.getElementById("addPrice").value};
+ details.splice(2,0,add);
+ console.log(details)
+ populate();
 }

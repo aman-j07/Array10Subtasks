@@ -1,7 +1,6 @@
 #list{
     margin: auto;
     width: 30%;
-    height: 150px;
 }
 td{
     text-align: center;
@@ -14,4 +13,11 @@ td{
     margin: auto;
     width: 30%;
     text-align: center;
+}
+#addProduct{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin: auto;
+
 }
