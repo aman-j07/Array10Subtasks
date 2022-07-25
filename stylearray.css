@@ -6,3 +6,12 @@
 td{
     text-align: center;
 }
+#searchdiv{
+    margin: auto;
+    width: 32%;
+}
+#table2{
+    margin: auto;
+    width: 30%;
+    text-align: center;
+}
