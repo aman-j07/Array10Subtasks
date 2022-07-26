@@ -1,29 +1,30 @@
 details=[
-    {company:"Samsung",model:"Galaxy",memory:64,price:15000},
-    {company:"Nokia",model:"S730",memory:128,price:22000},
-    {company:"Xiaomi",model:"Note",memory:32,price:12000},
-    {company:"Motorola",model:"G10",memory:32,price:15000},
-    {company:"Apple",model:"S12",memory:64,price:25000}
+    {company:"Samsung",model:"Galaxy",memory:64,price:15000,quantity:20},
+    {company:"Nokia",model:"S730",memory:128,price:22000,quantity:15},
+    {company:"Xiaomi",model:"Note",memory:32,price:12000,quantity:21},
+    {company:"Motorola",model:"G10",memory:32,price:15000,quantity:13},
+    {company:"Apple",model:"S12",memory:64,price:25000,quantity:18}
 ]
 const arr=[];
 var total=0;
 populate();
 optionsel=document.getElementById("heads");
-
 searched=document.getElementById("search");
 tablesearch=document.getElementById("tablesearch");
+
 
 function populate(){
 list=document.getElementById("list");
 list.innerHTML="";
-list.innerHTML="<tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th><th>Action</th></tr>";
+list.innerHTML="<tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th><th>Quantity</th><th>Action</th></tr>";
 text=""
 for(i=0;i<details.length;i++){
     
-    text+="<tr><td>"+details[i].company+"</td><td>"+details[i].model+"</td><td>"+details[i].memory+"</td><td>"+details[i].price+"</td><td><input type='checkbox' id='toBeDeleted' onclick='selected(this)'></td></tr>";
+    text+="<tr><td>"+details[i].company+"</td><td>"+details[i].model+"</td><td>"+details[i].memory+"</td><td>"+details[i].price+"</td><td>"+details[i].quantity+"</td><td><input type='checkbox' id='toBeDeleted' onclick='selected(this)'></td></tr>";
 }
 list.innerHTML+=text;
 }
+
 
 function search(){
 index=optionsel.selectedIndex;
@@ -43,6 +44,7 @@ else if(index==3 && searched.value==details[i].price){
 }
 }
 }
+
 
 function sorting(){
     alert();
@@ -115,12 +117,14 @@ function sorting(){
 populate();
 }
 
+
 function AddProduct(){
     add={company:document.getElementById("addCompany").value,model:document.getElementById("addModel").value,memory:document.getElementById("addMemory").value,price:document.getElementById("addPrice").value};
  details.splice(2,0,add);
  console.log(details)
  populate();
 }
+
 
 function selected(args){
     tr=args.parentNode.parentNode;
@@ -130,6 +134,9 @@ function selected(args){
     console.log(arr)
     console.log(details)
 }
+
+
+
 function deletethis(){
 for(i=0;i<arr.length;i++){
     for(j=0;j<details.length;j++){
@@ -144,13 +151,18 @@ populate();
 arr.splice(0,arr.length)
 }
 
+
 function addToBill(){
     opt=document.getElementById("billSelect");
     let index=opt.selectedIndex;
     let quantity=document.getElementById("productQuantity").value;
     billtable.innerHTML+="<tr><td>"+details[index-1].company+details[index-1].model+"</td><td>"+quantity+"</td><td>"+details[index-1].price*quantity+"</td></tr>"
     total=total+(details[index-1].price*quantity);
+    details[index-1].quantity-=quantity;
+    populate();
     }
+
+
 
 function generateBill(){
      billtable.innerHTML+="<tr><th>Total</th><td> </td><td>"+total+"</td></tr>";
