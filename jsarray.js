@@ -1,9 +1,9 @@
 details=[
-    {company:"Samsung",model:"Galaxy",memory:64,price:15000,quantity:20},
-    {company:"Nokia",model:"S730",memory:128,price:22000,quantity:15},
-    {company:"Xiaomi",model:"Note",memory:32,price:12000,quantity:21},
-    {company:"Motorola",model:"G10",memory:32,price:15000,quantity:13},
-    {company:"Apple",model:"S12",memory:64,price:25000,quantity:18}
+    {company:"Samsung",model:"Galaxy",memory:64,price:15000,quantity:20,rating:''},
+    {company:"Nokia",model:"S730",memory:128,price:22000,quantity:15,rating:''},
+    {company:"Xiaomi",model:"Note",memory:32,price:12000,quantity:21,rating:''},
+    {company:"Motorola",model:"G10",memory:32,price:15000,quantity:13,rating:''},
+    {company:"Apple",model:"S12",memory:64,price:25000,quantity:18,rating:''}
 ]
 const arr=[];
 var total=0;
@@ -16,11 +16,11 @@ tablesearch=document.getElementById("tablesearch");
 function populate(){
 list=document.getElementById("list");
 list.innerHTML="";
-list.innerHTML="<tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th><th>Quantity</th><th>Action</th></tr>";
+list.innerHTML="<tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th><th>Quantity</th><th>Rating</th><th>Action</th></tr>";
 text=""
 for(i=0;i<details.length;i++){
     
-    text+="<tr><td>"+details[i].company+"</td><td>"+details[i].model+"</td><td>"+details[i].memory+"</td><td>"+details[i].price+"</td><td>"+details[i].quantity+"</td><td><input type='checkbox' id='toBeDeleted' onclick='selected(this)'></td></tr>";
+    text+="<tr><td>"+details[i].company+"</td><td>"+details[i].model+"</td><td>"+details[i].memory+"</td><td>"+details[i].price+"</td><td>"+details[i].quantity+"</td><td>"+details[i].rating+"</td><td><input type='checkbox' id='toBeDeleted' onclick='selected(this)'></td></tr>";
 }
 list.innerHTML+=text;
 }
@@ -176,8 +176,11 @@ invenoryQuantity=document.getElementById("inventoryQuantity");
 console.log(invenoryQuantity)
 inventoryIndex=inventorySelect.selectedIndex;
 console.log(inventoryIndex)
-if(inventoryIndex==1){
-    details[inventoryIndex-1].quantity=inventoryQuantity.value;
-}
+details[inventoryIndex-1].quantity=inventoryQuantity.value;
 populate();
+}
+
+
+function rating(){
+    ratingSe
 }
