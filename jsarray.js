@@ -182,5 +182,8 @@ populate();
 
 
 function rating(){
-    ratingSe
+    ratingIndex1=document.getElementById("ratingProduct").selectedIndex;
+    ratingIndex2=document.getElementById("ratingSelect").selectedIndex;
+    details[ratingIndex1-1].rating=ratingIndex2;
+    populate();
 }

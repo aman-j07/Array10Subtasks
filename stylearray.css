@@ -15,7 +15,7 @@ tr{
 td{
     text-align: center;
 }
-#searchdiv, #addProduct, #bill, #inventory{
+#searchdiv, #addProduct, #bill, #inventory, #rating{
     margin: auto;
     width: 32%;
     padding-top: 2%;
