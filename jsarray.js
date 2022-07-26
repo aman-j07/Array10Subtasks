@@ -167,4 +167,17 @@ function addToBill(){
 function generateBill(){
      billtable.innerHTML+="<tr><th>Total</th><td> </td><td>"+total+"</td></tr>";
     }
-    /**h */
+
+
+function updateInventory(){
+invenorySelect=document.getElementById("inventorySelect");
+console.log(invenorySelect)
+invenoryQuantity=document.getElementById("inventoryQuantity");
+console.log(invenoryQuantity)
+inventoryIndex=inventorySelect.selectedIndex;
+console.log(inventoryIndex)
+if(inventoryIndex==1){
+    details[inventoryIndex-1].quantity=inventoryQuantity.value;
+}
+populate();
+}
