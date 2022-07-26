@@ -1,6 +1,12 @@
-#list{
+#tab,h2{
     margin: auto;
-    width: 30%;
+    width: 34%;
+    display: flex;
+    flex-flow: column;
+}
+#btnDelete{
+    width: 20%;
+    margin-left: 80%;
 }
 td{
     text-align: center;

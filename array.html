@@ -8,12 +8,14 @@
     <title>Array 10 Subtasks</title>
 </head>
 <body>
-    <div>
+    <div id="tab">
+        <h2>Task 1</h2>
     <table id="list">
-    <tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th></tr>
-    </table></div>
+  
+    </table>
+<button onclick="deletethis()" id="btnDelete">Delete</button></div>
     <div id="searchdiv">
-        <h2>Task 1</h2><select id="heads">
+        <h2>Task 2</h2><select id="heads">
         <option value="">Company</option>
         <option value="">Model</option>
         <option value="">Memory</option>
@@ -25,7 +27,7 @@
 
 </div>
 <div id="searchdiv">
-    <h2>Task 2</h2>
+    <h2>Task 3</h2>
     <select  id="sort" onchange="sorting()">
     <option >Sort--</option>
     <option>Ascending</option>
@@ -39,7 +41,7 @@
 </select>
 </div>
 <div id="addProduct">
-    <h2>Task 3</h2>
+    <h2>Task 4</h2>
     <label for="">Company</label><input type="text" id="addCompany">
     <label for="">Model</label><input type="text" id="addModel">
     <label for="">Memory</label><input type="number" id="addMemory">

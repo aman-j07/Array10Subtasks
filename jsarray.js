@@ -5,7 +5,7 @@ details=[
     {company:"Motorola",model:"G10",memory:32,price:15000},
     {company:"Apple",model:"S12",memory:64,price:25000}
 ]
-
+const arr=[];
 populate();
 optionsel=document.getElementById("heads");
 
@@ -15,11 +15,11 @@ tablesearch=document.getElementById("tablesearch");
 function populate(){
 list=document.getElementById("list");
 list.innerHTML="";
-list.innerHTML="<tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th></tr>";
+list.innerHTML="<tr><th>Company</th><th>Model</th><th>Memory(GB)</th><th>Price(Rs)</th><th>Action</th></tr>";
 text=""
 for(i=0;i<details.length;i++){
     
-    text+="<tr><td>"+details[i].company+"</td><td>"+details[i].model+"</td><td>"+details[i].memory+"</td><td>"+details[i].price+"</td></tr>";
+    text+="<tr><td>"+details[i].company+"</td><td>"+details[i].model+"</td><td>"+details[i].memory+"</td><td>"+details[i].price+"</td><td><input type='checkbox' id='toBeDeleted' onclick='selected(this)'></td></tr>";
 }
 list.innerHTML+=text;
 }
@@ -119,4 +119,26 @@ function AddProduct(){
  details.splice(2,0,add);
  console.log(details)
  populate();
+}
+
+function selected(args){
+    tr=args.parentNode.parentNode;
+   let index=tr.rowIndex;
+  
+    arr.push(details[index-1].company);
+    console.log(arr)
+    console.log(details)
+}
+function deletethis(){
+for(i=0;i<arr.length;i++){
+    for(j=0;j<details.length;j++){
+      if(arr[i]==details[j].company){
+        details.splice(j,1);
+      }
+    }
+    
+    console.log(details)
+}
+populate();
+arr.splice(0,arr.length)
 }
