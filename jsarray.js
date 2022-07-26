@@ -167,3 +167,4 @@ function addToBill(){
 function generateBill(){
      billtable.innerHTML+="<tr><th>Total</th><td> </td><td>"+total+"</td></tr>";
     }
+    /**h */
