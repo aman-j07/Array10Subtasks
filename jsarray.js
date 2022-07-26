@@ -187,3 +187,5 @@ function rating(){
     details[ratingIndex1-1].rating=ratingIndex2;
     populate();
 }
+
+// comment..
