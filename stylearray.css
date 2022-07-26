@@ -1,3 +1,7 @@
+tr{
+    border-top-width: 2px; 
+    border-top-color:grey ;
+}
 #tab,h2{
     margin: auto;
     width: 34%;
@@ -11,9 +15,10 @@
 td{
     text-align: center;
 }
-#searchdiv{
+#searchdiv, #addProduct, #bill{
     margin: auto;
     width: 32%;
+    padding-top: 2%;
 }
 #table2{
     margin: auto;
@@ -26,4 +31,7 @@ td{
     flex-direction: column;
     margin: auto;
 
+}
+#billtable{
+    width: 100%;
 }

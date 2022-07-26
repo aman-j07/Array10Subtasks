@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylearray.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylearray.css" />
     <title>Array 10 Subtasks</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="tab">
-        <h2>Task 1</h2>
-    <table id="list">
-  
-    </table>
-<button onclick="deletethis()" id="btnDelete">Delete</button></div>
+      <h2>Task 1</h2>
+      <table id="list"></table>
+      <button onclick="deletethis()" id="btnDelete">Delete</button>
+    </div>
     <div id="searchdiv">
-        <h2>Task 2</h2><select id="heads">
+      <h2>Task 2</h2>
+      <select id="heads">
         <option value="">Company</option>
         <option value="">Model</option>
         <option value="">Memory</option>
         <option value="">Price</option>
-    </select>
-<input type="text" name="" id="search">
-<button id="submit" onclick="search()">Submit</button></div>
-<div id="tablesearch">
-
-</div>
-<div id="searchdiv">
-    <h2>Task 3</h2>
-    <select  id="sort" onchange="sorting()">
-    <option >Sort--</option>
-    <option>Ascending</option>
-    <option>Descending</option></select>
-    <select id="heads2" onchange="sorting()">
-    <option >Sort by--</option>
-    <option value="">Company</option>
-    <option value="">Model</option>
-    <option value="">Memory</option>
-    <option value="">Price</option>
-</select>
-</div>
-<div id="addProduct">
-    <h2>Task 4</h2>
-    <label for="">Company</label><input type="text" id="addCompany">
-    <label for="">Model</label><input type="text" id="addModel">
-    <label for="">Memory</label><input type="number" id="addMemory">
-    <label for="">Price</label><input type="number" id="addPrice">
-    <button id="btnAdd" onclick="AddProduct()">Add</button>
-</div>
+      </select>
+      <input type="text" name="" id="search" />
+      <button id="submit" onclick="search()">Submit</button>
+    </div>
+    <div id="tablesearch"></div>
+    <div id="searchdiv">
+      <h2>Task 3</h2>
+      <select id="sort" onchange="sorting()">
+        <option>Sort--</option>
+        <option>Ascending</option>
+        <option>Descending</option>
+      </select>
+      <select id="heads2" onchange="sorting()">
+        <option>Sort by--</option>
+        <option value="">Company</option>
+        <option value="">Model</option>
+        <option value="">Memory</option>
+        <option value="">Price</option>
+      </select>
+    </div>
+    <div id="addProduct">
+      <h2>Task 4</h2>
+      <label for="">Company</label><input type="text" id="addCompany" />
+      <label for="">Model</label><input type="text" id="addModel" />
+      <label for="">Memory</label><input type="number" id="addMemory" />
+      <label for="">Price</label><input type="number" id="addPrice" />
+      <button id="btnAdd" onclick="AddProduct()">Add</button>
+    </div>
+    <div id="bill">
+        <select id="billSelect">
+            <option>Select-Product</option>
+            <option>Samsung Galaxy</option>
+            <option>Nokia S730</option>
+            <option>Xiaomi Note</option>
+            <option>Motorola G10</option>
+            <option>Apple S12</option>
+        </select>
+        <input type="number" id="productQuantity" placeholder="quantity">
+        <button id="addtobill" onclick="addToBill()">Add</button><button id="generatebill" onclick="generateBill()">Generate Bill</button>
+        <div id="billDetails"></div>
+        <h2>Task 5</h2>
+        <h4>Bill</h4>
+      <table id="billtable">
+        <tr>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Amount</th>
+        </tr>
+      </table>
+    </div>
     <script src="jsarray.js"></script>
-</body>
+  </body>
 </html>

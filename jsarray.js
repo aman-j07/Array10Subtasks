@@ -6,6 +6,7 @@ details=[
     {company:"Apple",model:"S12",memory:64,price:25000}
 ]
 const arr=[];
+var total=0;
 populate();
 optionsel=document.getElementById("heads");
 
@@ -142,3 +143,15 @@ for(i=0;i<arr.length;i++){
 populate();
 arr.splice(0,arr.length)
 }
+
+function addToBill(){
+    opt=document.getElementById("billSelect");
+    let index=opt.selectedIndex;
+    let quantity=document.getElementById("productQuantity").value;
+    billtable.innerHTML+="<tr><td>"+details[index-1].company+details[index-1].model+"</td><td>"+quantity+"</td><td>"+details[index-1].price*quantity+"</td></tr>"
+    total=total+(details[index-1].price*quantity);
+    }
+
+function generateBill(){
+     billtable.innerHTML+="<tr><th>Total</th><td> </td><td>"+total+"</td></tr>";
+    }
