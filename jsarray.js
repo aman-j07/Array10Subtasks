@@ -171,11 +171,13 @@ for(i=0;i<arr.length;i++){
 }
 console.log(details)
 populate();
+createSelect();
 arr.splice(0,arr.length)
 }
 
-var flag=false;
+
 function addToBill(){
+    var flag=false;
     document.getElementById("message").innerHTML="";
     opt=document.getElementById("billSelect");
     let index=opt.selectedIndex;
@@ -205,7 +207,6 @@ function addToBill(){
      total=total+(details[index].price*quantity);
     details[index].quantity-=quantity;
     populate();
-    flag=false;
  }
 }
     else{
@@ -214,8 +215,9 @@ function addToBill(){
     }
 
     function addToarrBill(){
+        billtable.innerHTML="<tr><th>Description</th><th>Quantity</th><th>Amount</th></tr>"
     for(i=0;i<arrBill.length;i++){
-        billtable.innerHTML="<tr><th>Description</th><th>Quantity</th><th>Amount</th></tr><tr><td>"+arrBill[i].company+arrBill[i].model+"</td><td>"+arrBill[i].quantity+"</td><td>"+arrBill[i].amount+"</td></tr>"
+        billtable.innerHTML+="<tr><td>"+arrBill[i].company+arrBill[i].model+"</td><td>"+arrBill[i].quantity+"</td><td>"+arrBill[i].amount+"</td></tr>"
          }}
 
 
