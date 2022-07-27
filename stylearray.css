@@ -2,26 +2,79 @@ tr{
     border-top-width: 2px; 
     border-top-color:grey ;
 }
+#upper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    border-bottom: 1px solid black;
+}
+#addProduct div{
+    display: flex;
+    justify-content: space-between;
+margin: 2% 0%;
+}
+#addProduct div button{
+    margin-left: 86%;
+}
+#upper-mid{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin: 0% 1%;
+}
+#upper-left, #upper-right{
+    width: 25%;
+}
+#upper-right h4{
+    margin: 1% 0%;
+}
+#upper-left h4 {
+    margin: 0%;
+}
 #tab,h2{
-    margin: auto;
-    width: 34%;
+    width: 90%;
     display: flex;
     flex-flow: column;
+    margin: 1% 0%;
 }
+ #sortheading{
+    margin: 0%;
+    display: inline;
+ }   
 #btnDelete{
-    width: 20%;
+    width: 13%;
     margin-left: 80%;
 }
+#lower{
+    display: flex;
+}
+#bill{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0% 1%;
+}
+#filter{
+    padding: 0% 1% 0% 0%;
+}
+#lower-right{
+    padding: 0% 0% 0% 1%;   
+}
+#min, #max{
+   width: 35%;
+}
+/* 
 td{
     text-align: center;
 }
-#searchdiv, #addProduct, #bill, #inventory, #rating{
-    margin: auto;
+#searchdiv, #addProduct, #bill, #inventory, #rating, #filter{
     width: 32%;
     padding-top: 2%;
-}
+} 
 #table2{
-    margin: auto;
     width: 30%;
     text-align: center;
 }
@@ -29,10 +82,19 @@ td{
     display: flex;
     width: 20%;
     flex-direction: column;
-    margin: auto;
 
 }
-#billtable{
+#billtable,#billtable2{
     width: 100%;
+}
+#billtable td,#billtable2 td{
+    width: 32%;
+}
+#filter input{
+    width: 30%;
+    margin: 0% 1%;
+} */
+#message{
+    color: red;
 }
 /**comment
