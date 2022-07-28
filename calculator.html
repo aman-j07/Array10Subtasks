@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleCalculator.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="input"><input type="text" id="inputNumber" /></div>
+      <div id="buttons">
+        <div id="first">
+          <button id="7" onclick="number(this)">7</button
+          ><button id="8" onclick="number(this)">8</button
+          ><button id="9" onclick="number(this)">9</button
+          ><button id="0" onclick="number(this)">0</button>
+        </div>
+        <div id="second">
+          <button id="4" onclick="number(this)">4</button
+          ><button id="5" onclick="number(this)">5</button
+          ><button id="6" onclick="number(this)">6</button
+           ><button id="." onclick="number(this)">.</button>
+        </div>
+        <div id="third">
+          <button id="1" onclick="number(this)">1</button
+          ><button id="2" onclick="number(this)">2</button
+          ><button id="3" onclick="number(this)">3</button
+          > <button id="reset" style="margin: 0%;" onclick="reset()">C</button>
+        </div>
+        <div id="fourth">
+            <button id="add" onclick="operations(this)">+</button>
+            <button id="subtract" onclick="operations(this)">-</button>
+            <button id="divide" onclick="operations(this)">/</button> 
+            <button id="multiply" onclick="operations(this)">x</button
+          ><button id="equals" onclick="calculate()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="jsCalculator.js"></script>
+  </body>
+</html>

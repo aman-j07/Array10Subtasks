@@ -1,0 +1,68 @@
+#calculator{
+    width: 30%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin: auto;
+    border-radius: 5px;
+}
+#input{    
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inputNumber{
+    width: 95%;
+    height: 90%;
+    border-radius: 5px;
+    font-size: 2.5rem;
+}
+#inputNumber::-webkit-outer-spin-button,
+#inputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#buttons{
+    width: 100%;
+    height: 300px;
+}
+#first,#second,#third,#fourth{
+    height: 26%;
+    margin: 1%;
+}
+#reset{
+    font-size: 0.9rem;
+}
+#first button,#second button{
+    width: 23%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    margin: 1%;
+    font-size: 2.3rem;
+}
+#third button{
+    width: 23%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    margin: 1%;
+    font-size: 2.3rem;
+}
+#fourth button{
+    width: 17%;
+    height: 85%;
+    border-radius: 50%;
+    border: none;
+    margin: 1%;
+    font-size: 2.3rem;
+}
+#equals{
+    background-color: rgb(187, 65, 8);
+    color: white;
+}
+
