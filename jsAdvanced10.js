@@ -14,6 +14,10 @@ for(i=0;i<details.length;i++){
   }
 }
 }
+let arrow=()=>{
+  let idArrow=document.getElementById("inputIdArrow").value;
+  document.getElementById("dispSalaryArrow").innerHTML="15% of "+details[idArrow-1].name+"'s salary ="+ details[idArrow-1].basicSal*0.15;
+}
 // class details1{
 //     constructor(id,name,basicSal){
 //       this.id=id;
