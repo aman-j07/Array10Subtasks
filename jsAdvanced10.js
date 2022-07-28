@@ -1,3 +1,4 @@
+"use strict"
 const details=[
   {id:1,name:'John',basicSal:8000,updatedSal:0},
   {id:2,name:'Mark',basicSal:9000,updatedSal:0},
@@ -6,8 +7,9 @@ const details=[
 
 
 update();
+setSalary();
 function update(){
-for(i=0;i<details.length;i++){
+for(var i=0;i<details.length;i++){
   try{
   details[i].updatedSal=parseInt(details[i].basicSal*1.10);
   }
@@ -21,6 +23,10 @@ let arrow=()=>{
   document.getElementById("dispSalaryArrow").innerHTML="15% of "+details[idArrow-1].name+"'s salary ="+ details[idArrow-1].basicSal*0.15;
 }
 
+function setSalary(){
+  for(var i=0;i<details.length;i++){
+    details[i].basicSal=30000;
+}}
 // class details1{
 //     constructor(id,name,basicSal){
 //       this.id=id;
@@ -47,7 +53,7 @@ let arrow=()=>{
 // tableDetails.innerHTML+="<tr><td>"+obj1.id+"</td><td>"+obj1.name+"</td><td>"+obj1.basicSal+"</td><td><a href=''>Delete</a></td></tr>";
 
 tableDetails.innerHTML+="<tr><th>Id</th><th>Name</th><th>Total Salary</th><th>Updated Salary</th></tr>"
-for(i=0;i<details.length;i++){
+for(var i=0;i<details.length;i++){
     tableDetails.innerHTML+="<tr><td>"+details[i].id+"</td><td>"+details[i].name+"</td><td>"+details[i].basicSal+"</td><td>"+details[i].updatedSal+"</td></tr>";
     if(details[i].basicSal<=0){
       debugger;
