@@ -1,0 +1,15 @@
+#customerDetails{
+    display: flex;
+    flex-flow: column;
+    width: 25%;
+    height: 120px;
+}
+#customerDetails div{
+    display: flex;
+    margin: 2% 0%;
+    justify-content: space-between;
+}
+#btnAdd{
+    width: 25%;
+    margin-left: 75%;
+}
