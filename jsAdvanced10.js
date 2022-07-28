@@ -53,18 +53,36 @@ for(i=0;i<details.length;i++){
       debugger;
     }
   }
+  var flag=0;
 function add(){
     var id=document.getElementById("inputId").value;
     var name=document.getElementById("inputName").value;
     var basicSal=document.getElementById("inputBasicSal").value;
     var tableDetails=document.getElementById("tableDetails");
     tableDetails.innerHTML='';
+    document.getElementById("para2").innerHTML='';
+    // num=/[0-9]/;
+    if(name=='' || name>0 ){
+      document.getElementById("inputName").value='';
+      tableDetails.innerHTML="<tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>"
+      for(i=0;i<details.length;i++){
+          tableDetails.innerHTML+="<tr><td>"+details[i].id+"</td><td>"+details[i].name+"</td><td>"+details[i].basicSal+"</td></tr>";
+      }
+    try {
+      if(name=='')throw "Name cannot be empty"
+    if(name>0)throw "Name cannot be a number"  
+  }
+    catch(err){
+      document.getElementById("para2").innerHTML=err;
+    }
+  }
+  else{
 
-    var detail={id:id,name:name,basicSal:basicSal};
-    details.push(detail);
+     var detail={id:id,name:name,basicSal:basicSal};
+     details.push(detail);
     
 
-    tableDetails.innerHTML="<tr><th>Id</th><th>Name</th><th>Total Salary</th><th>Action</th></tr>"
+    tableDetails.innerHTML="<tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>"
     for(i=0;i<details.length;i++){
         tableDetails.innerHTML+="<tr><td>"+details[i].id+"</td><td>"+details[i].name+"</td><td>"+details[i].basicSal+"</td></tr>";
     }
@@ -72,4 +90,4 @@ function add(){
     document.getElementById("inputId").value='';
     document.getElementById("inputName").value='';
     document.getElementById("inputBasicSal").value=''; 
-}
+}}
