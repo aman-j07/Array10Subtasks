@@ -1,4 +1,4 @@
-"use strict"
+import { idExport, nameExport, salaryExport } from "./jsAdvancedExport.js";
 const details=[
   {id:1,name:'John',basicSal:8000,updatedSal:0},
   {id:2,name:'Mark',basicSal:9000,updatedSal:0},
@@ -6,8 +6,11 @@ const details=[
 ];
 
 
+var objExport={id:idExport, name:nameExport, basicSal:salaryExport};
+console.log(idExport);
+details.push(objExport);
+
 update();
-setSalary();
 function update(){
 for(var i=0;i<details.length;i++){
   try{
@@ -23,10 +26,6 @@ let arrow=()=>{
   document.getElementById("dispSalaryArrow").innerHTML="15% of "+details[idArrow-1].name+"'s salary ="+ details[idArrow-1].basicSal*0.15;
 }
 
-function setSalary(){
-  for(var i=0;i<details.length;i++){
-    details[i].basicSal=30000;
-}}
 // class details1{
 //     constructor(id,name,basicSal){
 //       this.id=id;
