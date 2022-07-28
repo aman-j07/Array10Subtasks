@@ -6,12 +6,23 @@ class details1{
       this.basicSal=basicSal;
     }
 }
-let obj1=new details1(1,'John',8000);
-console.log(obj1)
+// let obj1=new details1(1,'John',8000);
+// console.log(obj1)
+text='{"id":"1","name":"John","basicSal":"8000"}';
+const obj2=JSON.parse(text);
+
+
+// var tableDetails=document.getElementById("tableDetails");
+// tableDetails.innerHTML='';
+// tableDetails.innerHTML="<tr><th>Id</th><th>Name</th><th>Total Salary</th><th>Action</th></tr>"
+// tableDetails.innerHTML+="<tr><td>"+obj1.id+"</td><td>"+obj1.name+"</td><td>"+obj1.basicSal+"</td><td><a href=''>Delete</a></td></tr>";
+
 var tableDetails=document.getElementById("tableDetails");
 tableDetails.innerHTML='';
 tableDetails.innerHTML="<tr><th>Id</th><th>Name</th><th>Total Salary</th><th>Action</th></tr>"
-tableDetails.innerHTML+="<tr><td>"+obj1.id+"</td><td>"+obj1.name+"</td><td>"+obj1.basicSal+"</td><td><a href=''>Delete</a></td></tr>";
+tableDetails.innerHTML+="<tr><td>"+obj2.id+"</td><td>"+obj2.name+"</td><td>"+obj2.basicSal+"</td><td><a href=''>Delete</a></td></tr>";
+
+ 
 // function add(){
 //     var id=document.getElementById("inputId").value;
 //     var name=document.getElementById("inputName").value;
