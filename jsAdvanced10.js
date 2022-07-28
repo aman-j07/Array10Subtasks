@@ -56,4 +56,3 @@ tableDetails.innerHTML+="<tr><td>"+objDetails.id+"</td><td>"+objDetails.name+"</
 //     }
   
 // }
-// comment
