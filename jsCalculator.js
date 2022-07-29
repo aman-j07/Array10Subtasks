@@ -20,6 +20,11 @@ function decimal(args){
   let dec = args.id;
   document.getElementById("inputNumber").value = inputValue.value + dec;
 }}
+function number(args) {
+  num = args.id;
+  let inputValue = document.getElementById("inputNumber");
+  document.getElementById("inputNumber").value = inputValue.value + num;
+}
 function operations(args) {
   operationId = args.id;
   if (operationId == "add") {
