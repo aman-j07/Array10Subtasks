@@ -1,23 +1,26 @@
-tr{
-    border-top-width: 2px; 
-    border-top-color:grey ;
+tr {
+    border-top-width: 2px;
+    border-top-color: grey;
 }
-#upper{
+
+#upper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
     border-bottom: 1px solid black;
 }
-#addProduct div{
+
+#addProduct div {
     display: flex;
     justify-content: space-between;
-margin: 2% 0%;
+    margin: 2% 0%;
 }
-#addProduct div button{
+
+#addProduct div button {
     margin-left: 86%;
 }
-#upper-mid{
+
+#upper-mid {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -26,47 +29,61 @@ margin: 2% 0%;
     border-right: 1px solid black;
     margin: 0% 1%;
 }
-#upper-left, #upper-right{
+
+#upper-left,
+#upper-right {
     width: 25%;
 }
-#upper-right h4{
+
+#upper-right h4 {
     margin: 1% 0%;
 }
+
 #upper-left h4 {
     margin: 0%;
 }
-#tab,h2{
+
+#tab,
+h2 {
     width: 90%;
     display: flex;
     flex-flow: column;
     margin: 1% 0%;
 }
- #sortheading{
+
+#sortheading {
     margin: 0%;
     display: inline;
- }   
-#btnDelete{
+}
+
+#btnDelete {
     width: 13%;
     margin-left: 80%;
 }
-#lower{
+
+#lower {
     display: flex;
 }
-#bill{
+
+#bill {
     border-left: 1px solid black;
     border-right: 1px solid black;
     padding: 0% 1%;
 }
-#filter{
+
+#filter {
     padding: 0% 1% 0% 0%;
 }
-#lower-right{
-    padding: 0% 0% 0% 1%;   
+
+#lower-right {
+    padding: 0% 0% 0% 1%;
 }
-#min, #max{
-   width: 35%;
+
+#min,
+#max {
+    width: 35%;
 }
-#message{
+
+#message {
     color: red;
 }
-/* comment */
